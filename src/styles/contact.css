@@ -43,6 +43,11 @@ div.mail {
     cursor: pointer;
 }
 
+.mail span {
+    user-select: text;
+    -webkit-user-select: text;
+}
+
 .mail span.mail:hover {
     text-decoration: underline;
 }
