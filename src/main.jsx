@@ -7,6 +7,7 @@ import './styles/variables.css'
 import './styles/globals.css'
 
 import { ThemeProvider } from './context/ThemeContext'
+import { WindowProvider } from './context/WindowContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <ThemeProvider>
