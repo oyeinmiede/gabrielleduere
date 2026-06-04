@@ -102,7 +102,7 @@ body {
     z-index: 999;
 }
 
-.bottom-sheet button {
+.bottom-sheet .sheet-header button {
     background: none;
     border: none;
     outline: none;
