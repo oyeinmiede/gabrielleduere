@@ -1,8 +1,12 @@
 import Mushroom from '../ui/Mushroom'
+import { useContext } from 'react'
+import { WindowContext } from '../../context/WindowContext'
 
 import '../../styles/home.css'
 
 const Home = () => {
+    const { openWindow } = useContext(WindowContext)
+
     return (
         <div className="home-modal">
 
@@ -23,49 +27,62 @@ const Home = () => {
                     </h1>
 
                     <p>
-                        frontend developer,
-                        videographer,
-                        student
+                        frontend developer, videographer, student
                     </p>
 
                     <div className="modal-links">
 
-                        <div className="modal-link">
+                        <div
+                            className="modal-link"
+                            onClick={() => openWindow('about')}
+                        >
                             <img
-                                src="/public/icons/icon_about_dark.webp"
-                                alt=""
+                                src="/icons/icon_about_dark.webp"
+                                alt="about"
                             />
                             <span>about</span>
                         </div>
 
-                        <div className="modal-link">
+                        <div
+                            className="modal-link"
+                            onClick={() => openWindow('links')}
+                        >
                             <img
-                                src="/public/icons/icon_links_dark.webp"
-                                alt=""
+                                src="/icons/icon_links_dark.webp"
+                                alt="links"
                             />
                             <span>links</span>
                         </div>
 
-                        <div className="modal-link">
+                        <div
+                            className="modal-link"
+                            onClick={() => openWindow('work')}
+                        >
                             <img
-                                src="/public/icons/icon_work_dark.webp"
-                                alt=""
+                                src="/icons/icon_work_dark.webp"
+                                alt="work"
                             />
                             <span>work</span>
                         </div>
 
-                        <div className="modal-link">
+                        <div
+                            className="modal-link"
+                            onClick={() => openWindow('faq')}
+                        >
                             <img
-                                src="/public/icons/icon_faq_dark.webp"
-                                alt=""
+                                src="/icons/icon_faq_dark.webp"
+                                alt="faq"
                             />
                             <span>faq</span>
                         </div>
 
-                        <div className="modal-link">
+                        <div
+                            className="modal-link"
+                            onClick={() => openWindow('contact')}
+                        >
                             <img
-                                src="/public/icons/icon_contact_dark.webp"
-                                alt=""
+                                src="/icons/icon_contact_dark.webp"
+                                alt="contact"
                             />
                             <span>contact</span>
                         </div>

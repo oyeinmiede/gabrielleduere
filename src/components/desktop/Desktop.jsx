@@ -1,11 +1,11 @@
-import '../modals/Home'
-import Home from '../modals/Home'
 import '../../styles/desktop.css'
+
+import WindowRenderer from './WindowRenderer'
 
 const Desktop = () => {
     return (
-        <main className='desktop'>
-            <Home />
+        <main className="desktop">
+            <WindowRenderer />
         </main>
     )
 }
