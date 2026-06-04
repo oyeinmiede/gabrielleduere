@@ -15,7 +15,7 @@ body {
     height: 100vh;
 }
 
-.theme-btn{
+.theme-btn, .mute-btn {
     background: none;
     border: none;
     outline: none;
@@ -28,7 +28,7 @@ body {
     margin: 10px;
 }
 
-.theme-btn img {
+.theme-btn img, .mute-btn img {
     width: 50px;
     height: auto;
 }
@@ -121,4 +121,9 @@ body {
 .sheet-content {
     padding: 16px;
     overflow-y: auto;
+}
+
+.actions {
+    display: flex;
+    align-items: center;
 }

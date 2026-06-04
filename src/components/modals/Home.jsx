@@ -1,10 +1,12 @@
 import Mushroom from '../ui/Mushroom'
 import { useContext } from 'react'
 import { WindowContext } from '../../context/WindowContext'
+import { SoundContext } from '../../context/SoundContext'
 
 import '../../styles/home.css'
 
 const Home = () => {
+    const { play } = useContext(SoundContext)
     const { openWindow } = useContext(WindowContext)
 
     return (
@@ -34,7 +36,11 @@ const Home = () => {
 
                         <div
                             className="modal-link"
-                            onClick={() => openWindow('about')}
+                            onClick={(e) => {
+                                e.stopPropagation()
+                                play('open')
+                                openWindow('about')}
+                            }
                         >
                             <img
                                 src="/icons/icon_about_dark.webp"

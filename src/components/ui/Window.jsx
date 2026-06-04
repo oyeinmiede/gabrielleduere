@@ -1,4 +1,5 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useContext, useEffect } from 'react'
+import { SoundContext } from '../../context/SoundContext'
 
 const Window = ({
     title,
@@ -9,7 +10,7 @@ const Window = ({
     bringToFront
 }) => {
     const [dragging, setDragging] = useState(false)
-
+    const { play } = useContext(SoundContext)
     const offset = useRef({ x: 0, y: 0 })
 
     const onMouseDown = (e) => {
@@ -36,6 +37,10 @@ const Window = ({
         setDragging(false)
     }
 
+    useEffect((e) => {
+        play('open')
+    }, [])
+
     return (
         <div
             className="window"
@@ -48,7 +53,13 @@ const Window = ({
             >
                 <h3>{title}</h3>
 
-                <button onClick={onClose}>
+                <button
+                    onClick={(e) => {
+                        e.stopPropagation()
+                        play('close')
+                        onClose()
+                    }}
+                >
                     [x]
                 </button>
             </div>
