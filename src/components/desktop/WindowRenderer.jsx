@@ -1,9 +1,11 @@
 import { useContext } from 'react'
 import { WindowContext } from '../../context/WindowContext'
 
-import Window from '../ui/Window'
+import useDeviceMode from '../../hooks/useDeviceMode'
 
-import Home from '../modals/Home'
+import Window from '../ui/Window'
+import BottomSheet from '../ui/BottomSheet'
+
 import About from '../modals/About'
 import Work from '../modals/Work'
 import FAQ from '../modals/FAQ'
@@ -18,29 +20,16 @@ const WindowRenderer = () => {
         updatePosition
     } = useContext(WindowContext)
 
-    const renderContent = (window) => {
-        const props = {
-            window,
-            onClose: () => closeWindow(window.type),
-            bringToFront,
-            updatePosition
-        }
+    const { mode } = useDeviceMode()
 
+    const renderContent = (window) => {
         switch (window.type) {
-            case 'home':
-                return <Home {...props} />
-            case 'about':
-                return <About {...props} />
-            case 'work':
-                return <Work {...props} />
-            case 'faq':
-                return <FAQ {...props} />
-            case 'links':
-                return <Links {...props} />
-            case 'contact':
-                return <Contact {...props} />
-            default:
-                return null
+            case 'about': return <About />
+            case 'work': return <Work />
+            case 'faq': return <FAQ />
+            case 'links': return <Links />
+            case 'contact': return <Contact />
+            default: return null
         }
     }
 
@@ -48,31 +37,48 @@ const WindowRenderer = () => {
         <>
             {windows
                 .filter(w => w.isOpen)
-                .map(window => (
-                    <div
-                        key={window.id}
-                        style={{
-                            position: 'absolute',
-                            zIndex: window.zIndex,
-                            transform: `translate(${window.x}px, ${window.y}px)`
-                        }}
-                        onMouseDown={() =>
-                            bringToFront(window.type)
-                        }
-                    >
-                        <Window
-                            title={window.type}
-                            window={window}
-                            onClose={() =>
-                                closeWindow(window.type)
+                .map(window => {
+
+                    if (mode === 'mobile') {
+                        return (
+                            <BottomSheet
+                                key={window.id}
+                                title={window.type}
+                                onClose={() =>
+                                    closeWindow(window.type)
+                                }
+                            >
+                                {renderContent(window)}
+                            </BottomSheet>
+                        )
+                    }
+
+                    return (
+                        <div
+                            key={window.id}
+                            style={{
+                                position: 'absolute',
+                                zIndex: window.zIndex,
+                                transform: `translate(${window.x}px, ${window.y}px)`
+                            }}
+                            onMouseDown={() =>
+                                bringToFront(window.type)
                             }
-                            updatePosition={updatePosition}
-                            bringToFront={bringToFront}
                         >
-                            {renderContent(window)}
-                        </Window>
-                    </div>
-                ))}
+                            <Window
+                                title={window.type}
+                                window={window}
+                                onClose={() =>
+                                    closeWindow(window.type)
+                                }
+                                updatePosition={updatePosition}
+                                bringToFront={bringToFront}
+                            >
+                                {renderContent(window)}
+                            </Window>
+                        </div>
+                    )
+                })}
         </>
     )
 }
