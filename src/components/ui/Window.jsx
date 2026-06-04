@@ -1,5 +1,6 @@
 import { useRef, useState, useContext, useEffect } from 'react'
 import { SoundContext } from '../../context/SoundContext'
+import '../../styles/window.css'
 
 const Window = ({
     title,

@@ -1,12 +1,21 @@
 .window {
     position: absolute;
-    width: 550px;
-    min-height: 350px;
+    width: 600px;
+    height: 450px;
     background: var(--window-bg);
     border: 1px solid var(--border);
     border-radius: var(--window-radius);
     box-shadow: var(--shadow-window);
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.window-body {
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .window-header {
