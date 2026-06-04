@@ -11,6 +11,8 @@ import { WindowProvider } from './context/WindowContext'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <ThemeProvider>
-        <App />
+        <WindowProvider>
+            <App />
+        </WindowProvider>
     </ThemeProvider>
 )

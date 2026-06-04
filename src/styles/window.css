@@ -1,0 +1,27 @@
+.window {
+    position: absolute;
+    width: 550px;
+    min-height: 350px;
+    background: var(--window-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--window-radius);
+    box-shadow: var(--shadow-window);
+    overflow: hidden;
+}
+
+.window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: var(--header-bg);
+    color: var(--header-text);
+    cursor: move;
+}
+
+.window-header button {
+    border: none;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
