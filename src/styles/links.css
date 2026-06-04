@@ -1,0 +1,113 @@
+.links-page {
+    height: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    color: var(--text-primary);
+    overflow-y: auto;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* =========================
+GRID
+========================= */
+
+.links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 100%;
+    gap: 1rem;
+}
+
+/* =========================
+LINK BOXES (RETRO ICON TILE)
+========================= */
+
+.link-box {
+    background: var(--soft-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem 0.5rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-decoration: none;
+    color: var(--text-primary);
+
+    transition: transform 0.15s ease, background 0.15s ease;
+    cursor: pointer;
+
+    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
+}
+
+/* hover = OS icon lift */
+.link-box:hover {
+    transform: translateY(-4px);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+/* active click feel */
+.link-box:active {
+    transform: translateY(-1px);
+}
+
+/* =========================
+ICON
+========================= */
+
+.icon {
+    font-size: 1.6rem;
+    color: var(--accent);
+    margin-bottom: 0.5rem;
+}
+
+/* label */
+.link-box p {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* =========================
+NOTE BOX 
+========================= */
+
+.note-box {
+    /* margin-top: auto; */
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    background: var(--soft-bg);
+    border-radius: 8px;
+    max-width: max-content;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+}
+
+/* =========================
+RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+    .links-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .links-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .link-box {
+        padding: 0.8rem;
+    }
+
+    .icon {
+        font-size: 1.4rem;
+    }
+}
