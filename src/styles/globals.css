@@ -41,6 +41,7 @@ body {
     position: fixed;
     bottom: 20px;
     left: 50%;
+    width: 80vw;
     transform: translateX(-50%);
     background: var(--bg-secondary);
     color: var(--text-primary);
@@ -61,6 +62,29 @@ body {
         opacity: 1;
         transform: translateX(-50%) translateY(0);
     }
+}
+
+.toast-container {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+.toast h3 {
+    margin: 0 0 4px 0;
+    font-size: 0.9rem;
+}
+
+.toast p {
+    margin: 0;
+    font-size: 0.8rem;
+    opacity: 0.85;
 }
 
 .bottom-sheet {

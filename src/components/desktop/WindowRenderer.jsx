@@ -1,4 +1,5 @@
-import { useContext } from 'react'
+import { useContext, useEffect, useRef } from 'react'
+import { ToastContext } from '../../context/ToastContext'
 import { WindowContext } from '../../context/WindowContext'
 
 import useDeviceMode from '../../hooks/useDeviceMode'
@@ -21,6 +22,25 @@ const WindowRenderer = () => {
     } = useContext(WindowContext)
 
     const { mode } = useDeviceMode()
+    const { addToast } = useContext(ToastContext)
+
+    const hasShown = useRef(false)
+
+    useEffect(() => {
+        if (mode === 'mobile' && !hasShown.current) {
+            addToast(
+                <div>
+                    <h3>hey there!</h3>
+                    <p>
+                        just letting you know that this site is best experienced on desktop,
+                        some features might be wonky on different devices.
+                    </p>
+                </div>,
+                10000
+            )
+            hasShown.current = true
+        }
+    }, [mode])
 
     const renderContent = (window) => {
         switch (window.type) {
