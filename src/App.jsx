@@ -1,10 +1,13 @@
+import Desktop from './components/desktop/Desktop'
+import Waves from './components/background/Waves'
 
-const App = () => {
-  return (
-    <div>
-      
-    </div>
-  )
+function App() {
+    return (
+        <>
+            <Waves />
+            <Desktop />
+        </>
+    )
 }
 
 export default App
