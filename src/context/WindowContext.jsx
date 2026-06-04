@@ -1,39 +1,86 @@
-import { createContext, useState } from "react";
+import { createContext, useState } from 'react'
 
 export const WindowContext = createContext()
+
 export const WindowProvider = ({ children }) => {
-    const [openWindows, setOpenWindows] = useState(['home'])
-    const [highestZ, setHighestZ] = useState(100)
-    const openWindow = (name) => {
-        if(openWindows.includes(name)) return
-        setOpenWindows(prev => [
-            ...prev,
-            name
-        ])
+    const [windows, setWindows] = useState([])
+
+    const [topZ, setTopZ] = useState(2)
+
+    const openWindow = (type) => {
+        setWindows(prev => {
+            const exists = prev.find(w => w.type === type)
+
+            if (exists) {
+                return prev.map(w =>
+                    w.type === type
+                        ? {
+                            ...w,
+                            isOpen: true,
+                            zIndex: topZ
+                        }
+                        : w
+                )
+            }
+
+            return [
+                ...prev,
+                {
+                    id: `${type}-${Date.now()}`,
+                    type,
+                    x: 120,
+                    y: 80,
+                    zIndex: topZ,
+                    isOpen: true
+                }
+            ]
+        })
+
+        setTopZ(prev => prev + 1)
     }
 
-    const closeWindow = (name) => {
-        if (name === 'home') return
-        setOpenWindows(prev => 
-            prev.filter(
-                window => window !== name
+    const closeWindow = (type) => {
+        if (type === 'home') return
+
+        setWindows(prev =>
+            prev.map(w =>
+                w.type === type
+                    ? { ...w, isOpen: false }
+                    : w
             )
         )
     }
 
-    const getNextZIndex = () => {
-        const next = highestZ + 1
-        setHighestZ(next)
-        return next
+    const bringToFront = (type) => {
+        setWindows(prev =>
+            prev.map(w =>
+                w.type === type
+                    ? { ...w, zIndex: topZ }
+                    : w
+            )
+        )
+
+        setTopZ(prev => prev + 1)
+    }
+
+    const updatePosition = (type, x, y) => {
+        setWindows(prev =>
+            prev.map(w =>
+                w.type === type
+                    ? { ...w, x, y }
+                    : w
+            )
+        )
     }
 
     return (
         <WindowContext.Provider
             value={{
-                openWindows,
+                windows,
                 openWindow,
                 closeWindow,
-                getNextZIndex
+                bringToFront,
+                updatePosition
             }}
         >
             {children}

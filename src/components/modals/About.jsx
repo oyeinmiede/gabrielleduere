@@ -1,17 +1,15 @@
-import Window from '../ui/Window'
-
-const About = ({ onClose }) => {
+const About = () => {
     return (
-        <Window
-            title="about"
-            onClose={onClose}
-        >
-            <h2>About Me</h2>
+        <div className="app-content">
+
+            <h2>about me</h2>
 
             <p>
-                frontend developer
+                hi, i'm gabrielle — frontend developer,
+                videographer, student.
             </p>
-        </Window>
+
+        </div>
     )
 }
 

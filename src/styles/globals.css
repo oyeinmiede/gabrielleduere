@@ -32,3 +32,7 @@ body {
     width: 50px;
     height: auto;
 }
+
+.mushroom {
+    display: none;
+}

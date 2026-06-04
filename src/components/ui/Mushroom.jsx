@@ -3,6 +3,7 @@ const Mushroom = () => {
         <img
             src="/public/images/mushroom.png"
             alt="mushroom"
+            className="mushroom"
         />
     )
 }

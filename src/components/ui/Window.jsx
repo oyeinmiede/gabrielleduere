@@ -1,13 +1,13 @@
 import { useRef, useState } from 'react'
 
-const Window = ({ title, children, onClose }) => {
-    const windowRef = useRef(null)
-
-    const [pos, setPos] = useState({
-        x: 100,
-        y: 100
-    })
-
+const Window = ({
+    title,
+    children,
+    onClose,
+    window,
+    updatePosition,
+    bringToFront
+}) => {
     const [dragging, setDragging] = useState(false)
 
     const offset = useRef({ x: 0, y: 0 })
@@ -15,19 +15,21 @@ const Window = ({ title, children, onClose }) => {
     const onMouseDown = (e) => {
         setDragging(true)
 
+        bringToFront(window.type)
+
         offset.current = {
-            x: e.clientX - pos.x,
-            y: e.clientY - pos.y
+            x: e.clientX - window.x,
+            y: e.clientY - window.y
         }
     }
 
     const onMouseMove = (e) => {
         if (!dragging) return
 
-        setPos({
-            x: e.clientX - offset.current.x,
-            y: e.clientY - offset.current.y
-        })
+        const x = e.clientX - offset.current.x
+        const y = e.clientY - offset.current.y
+
+        updatePosition(window.type, x, y)
     }
 
     const onMouseUp = () => {
@@ -36,11 +38,7 @@ const Window = ({ title, children, onClose }) => {
 
     return (
         <div
-            ref={windowRef}
             className="window"
-            style={{
-                transform: `translate(${pos.x}px, ${pos.y}px)`
-            }}
             onMouseMove={onMouseMove}
             onMouseUp={onMouseUp}
         >
