@@ -11,19 +11,21 @@
 
 .wave {
     position: absolute;
-    height: 300px;
     bottom: 0;
     width: 100%;
 }
 
 .wave-1 {
     opacity: 0.8;
+    height: 300px;
 }
 
 .wave-2 {
     opacity: 0.6;
+    height: 250px;
 }
 
 .wave-3 {
     opacity: 0.4;
+    height: 230px;
 }
