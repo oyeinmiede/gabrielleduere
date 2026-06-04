@@ -15,12 +15,19 @@ const ThemeProvider = ({ children }) => {
     const toggleTheme = () => {
         setTheme(prev =>
             prev === 'light'
+                ? 'dark'
+                : 'light'
         )
     }
     return (
-        <div>
-
-        </div>
+        <ThemeContext.Provider
+            value={{
+                theme,
+                toggleTheme
+            }}
+        >
+            {children}
+        </ThemeContext.Provider>
     )
 }
 
