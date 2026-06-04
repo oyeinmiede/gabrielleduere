@@ -1,54 +1,19 @@
-import Window from '../ui/Window'
+import '../../styles/contact.css'
 
-const Contact = ({
-    window,
-    onClose,
-    updatePosition,
-    bringToFront
-}) => {
+const Contact = () => {
     return (
-        <Window
-            title="contact"
-            window={window}
-            onClose={onClose}
-            updatePosition={updatePosition}
-            bringToFront={bringToFront}
-        >
-            <div className="app-content">
-
-                <h2>contact</h2>
-
-                <p>
-                    want to work together or just say hi?
-                </p>
-
-                <div className="contact-grid">
-
-                    <div className="contact-item">
-                        <h3>email</h3>
-                        <p>gabrielle@email.com</p>
-                    </div>
-
-                    <div className="contact-item">
-                        <h3>github</h3>
-                        <p>github.com/gabrielle</p>
-                    </div>
-
-                    <div className="contact-item">
-                        <h3>linkedin</h3>
-                        <p>linkedin.com/in/gabrielle</p>
-                    </div>
-
-                </div>
-
-                <div className="contact-note">
-                    <p>
-                        i usually respond within a few days ✨
-                    </p>
-                </div>
-
+        <div className='mail'>
+            <h2>yayy mail!</h2>
+            <p>
+            the easiest way to contact me is through email! i don't really check my social media messages, so please direct questions to my email instead 👍
+            </p>
+            <div className="mail-img">
+                <img src="/images/me.png" alt="" />
             </div>
-        </Window>
+            <p>email me at: <span className="mail">godd3101@gmail.com</span></p>
+            <p>or press the button below to open your mail app</p>
+            <button className="open-mail">send me an email</button>
+        </div>
     )
 }
 
