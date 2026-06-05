@@ -1,6 +1,6 @@
 import '../../styles/desktop.css'
 import Home from '../modals/Home'
-
+import DesktopFooter from '../ui/DesktopFooter'
 import WindowRenderer from './WindowRenderer'
 
 const Desktop = () => {
@@ -8,6 +8,7 @@ const Desktop = () => {
         <main className="desktop">
             <Home />
             <WindowRenderer />
+            <DesktopFooter />
         </main>
     )
 }
