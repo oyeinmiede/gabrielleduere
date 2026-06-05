@@ -1,16 +1,29 @@
 import { useContext } from 'react'
 import { SoundContext } from '../../context/SoundContext'
+import { ThemeContext } from '../../context/ThemeContext'
 
 const MuteButton = () => {
-    const { muted, toggleMute } = useContext(SoundContext)
-    const { play } = useContext(SoundContext)
+
+    const { muted, toggleMute, play } = useContext(SoundContext)
+    const { theme } = useContext(ThemeContext)
 
     return (
-        <button className='mute-btn' onClick={() =>{
-            toggleMute()
-            play('click')
-        }}>
-            {muted ? <img src="/public/icons/sound-off.png" alt="" /> : <img src="/public/icons/sound-on.png" alt="" />}
+        <button
+            className="mute-btn"
+            onClick={() => {
+                toggleMute()
+                play('click')
+            }}
+        >
+            <img
+                className={`mute-icon ${theme}`}
+                src={
+                    muted
+                        ? "/icons/sound-off.png"
+                        : "/icons/sound-on.png"
+                }
+                alt="mute toggle"
+            />
         </button>
     )
 }

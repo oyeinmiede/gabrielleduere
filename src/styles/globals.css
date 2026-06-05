@@ -33,6 +33,7 @@ body {
     max-width: 50px;
     max-height: 40px;
     margin: 10px;
+    padding: 0;
 }
 
 .theme-btn img, .mute-btn img {
@@ -133,6 +134,20 @@ body {
 .actions {
     display: flex;
     align-items: center;
+}
+
+.mute-icon {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.2s ease;
+}
+
+.mute-icon.dark {
+    filter: brightness(0) invert(1);
+}
+
+.mute-icon.light {
+    filter: none;
 }
 
 ::-webkit-scrollbar {

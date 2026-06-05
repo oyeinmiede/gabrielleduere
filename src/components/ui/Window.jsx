@@ -61,7 +61,7 @@ const Window = ({
                         onClose()
                     }}
                 >
-                    [x]
+                    [ x ]
                 </button>
             </div>
 

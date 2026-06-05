@@ -28,7 +28,6 @@ div.mail {
     min-height: 180px;
     border-radius: 16px;
     overflow: hidden;
-    background: var(--soft-bg);
 }
 
 .mail-img img {
@@ -77,7 +76,7 @@ div.mail {
 
 .open-mail:hover {
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 0.08);
+    background: var(--accent)
 }
 
 .open-mail:active {
