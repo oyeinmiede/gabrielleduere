@@ -31,6 +31,10 @@
         drop-shadow(0 0 15px rgba(255,255,200,0.4));
 }
 
+[data-theme='light'] .music-cat.on {
+    filter: drop-shadow(0 0 10px rgba(255, 200, 0, 0.8)); /* warm yellow glow */
+}
+
 @keyframes floatCat {
     0%, 100% { transform: translateY(0px); }
     50% { transform: translateY(-6px); }

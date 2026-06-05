@@ -60,9 +60,13 @@ body {
     animation: bounce 1s infinite;
 }
 
-/* Tooltip only on hover */
+[data-theme='light'] .mushroom img:hover {
+    filter: drop-shadow(0 0 10px rgba(255, 200, 0, 0.8)); /* warm yellow glow */
+}
+
 .mushroom:hover::after {
     content: 'fun stuff!';
+    color: var(--header-text);
     position: absolute;
     top: 100%; 
     left: 60%;
