@@ -213,6 +213,18 @@ MOBILE
         flex-direction: column;
     }
 
+    .work {
+        overflow-y: auto;
+    }
+
+    .dev-picks .card.big {
+        flex-direction: column;
+    }
+
+    .dev-picks .screenshot {
+        height: 200px;
+    }
+
     .grid {
         grid-template-columns: 1fr;
     }

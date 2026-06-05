@@ -1,22 +1,31 @@
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
-const Toast = ({ message, duration = 2500, onClose }) => {
-    const [visible, setVisible] = useState(true)
+const Toast = ({
+    message,
+    duration = 2500,
+    onClose
+}) => {
 
     useEffect(() => {
         const timer = setTimeout(() => {
-            setVisible(false)
             onClose?.()
         }, duration)
 
         return () => clearTimeout(timer)
     }, [duration, onClose])
 
-    if (!visible) return null
-
     return (
         <div className="toast">
             {message}
+
+            <button
+                className="toast-btn"
+                onClick={() => {
+                    onClose()
+                }}
+            >
+                okay!
+            </button>
         </div>
     )
 }

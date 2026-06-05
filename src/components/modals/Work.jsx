@@ -40,27 +40,26 @@ const Work = () => {
     const picks = [
         {
             title: "FM Archive Page",
-            desc: "A playful early-2000s inspired interface system built to explore how far a web experience can feel like a real operating system. It includes draggable windows, sound interactions, layered UI states, and responsive behaviors that mimic desktop environments.",
+            desc: "A personal archive and project showcase inspired by frontend mentor projects. Built with React and featuring a custom desktop-style interface, 60+ projects, and an interactive file-system-inspired experience for exploring my work.",
             image: "/images/fm-archive.png",
             link: "https://fm-archive.vercel.app/",
             git: "https://github.com/oyeinmiede/fm-archive"
         },
         {
             title: "Mortgage Repayment Calculator App",
-            desc: "A reusable set of animated UI components designed for modern frontend workflows. Focused on micro-interactions, smooth transitions, and accessibility while maintaining a nostalgic visual identity.",
+            desc: "A responsive mortgage calculator that helps users estimate monthly repayments based on loan amount, interest rate, and repayment term. The project focuses on clean form validation, real-time calculations, and presenting financial data in a user-friendly way.",
             image: "/images/mortgage-calc.png",
             link: "https://fm-archive.vercel.app/fm-projects/mortgage-repayment-calculator-main/",
             git: "https://github.com/oyeinmiede/fm-archive/tree/main/public/fm-projects/mortgage-repayment-calculator-main"
         },
         {
             title: "Typing Speed Test",
-            desc: "A collection of experimental landing pages built to push visual storytelling in the browser. Each concept explores layout, motion, and typography as a narrative tool rather than just structure.",
+            desc: "An interactive typing challenge that measures typing speed and accuracy in real time. Features include live WPM calculation, mistake tracking, dynamic text generation, and a clean interface designed to keep users focused on improving their typing performance.",
             image: "/images/typing-test.png",
             link: "https://fm-archive.vercel.app/fm-projects/typing-speed-test-main/",
             git: "https://github.com/oyeinmiede/fm-archive/tree/main/public/fm-projects/typing-speed-test-main"
         }
     ]
-
     return (
         <div className="app work">
 

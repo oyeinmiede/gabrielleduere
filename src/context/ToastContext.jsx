@@ -1,4 +1,5 @@
 import { createContext, useState } from 'react'
+import Toast from '../components/ui/Toast'
 
 export const ToastContext = createContext()
 
@@ -10,12 +11,12 @@ export const ToastProvider = ({ children }) => {
 
         setToasts(prev => [
             ...prev,
-            { id, content, duration }
+            {
+                id,
+                content,
+                duration
+            }
         ])
-
-        setTimeout(() => {
-            removeToast(id)
-        }, duration)
     }
 
     const removeToast = (id) => {
@@ -32,9 +33,12 @@ export const ToastProvider = ({ children }) => {
 
             <div className="toast-container">
                 {toasts.map(t => (
-                    <div key={t.id} className="toast">
-                        {t.content}
-                    </div>
+                    <Toast
+                        key={t.id}
+                        message={t.content}
+                        duration={t.duration}
+                        onClose={() => removeToast(t.id)}
+                    />
                 ))}
             </div>
         </ToastContext.Provider>
