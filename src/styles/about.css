@@ -163,10 +163,12 @@ MOBILE RESPONSIVE
 ========================= */
 
 @media (max-width: 768px) {
+    .app {
+        max-width: 100%;
+    }
 
-    .about-head {
-        flex-direction: column;
-        align-items: flex-start;
+    .about-content {
+        overflow-y: auto;
     }
 
     .avatar {

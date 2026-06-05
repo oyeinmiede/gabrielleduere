@@ -60,9 +60,10 @@ FAQ ITEMS
 }
 
 .faq-item p {
-    padding: 0 1rem 1rem;
+    padding: 1rem;
     color: var(--text-secondary);
     line-height: 1.6;
+    background-color: var(--soft-bg);
 }
 
 /* ===================
@@ -73,6 +74,7 @@ FAQ ITEMS
 
     .faq-page {
         padding: 1rem;
+        width: 100%;
     }
 
     .faq-item summary {

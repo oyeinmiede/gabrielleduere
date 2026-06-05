@@ -99,6 +99,9 @@ RESPONSIVE
 }
 
 @media (max-width: 600px) {
+    .links-page {
+        width: 100%;
+    }
     .links-grid {
         grid-template-columns: repeat(2, 1fr);
     }
