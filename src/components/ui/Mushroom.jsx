@@ -1,10 +1,12 @@
 const Mushroom = () => {
     return (
-        <img
-            src="/public/images/mushroom.png"
-            alt="mushroom"
-            className="mushroom"
-        />
+        <div className="mushroom">
+            <img
+                src="/public/images/mushroom.png"
+                alt="mushroom"
+            />
+        </div>
+       
     )
 }
 

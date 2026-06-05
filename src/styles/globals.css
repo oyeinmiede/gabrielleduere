@@ -42,8 +42,44 @@ body {
 }
 
 .mushroom {
-    display: none;
+    position: relative;
+    display: inline-block;
 }
+
+.mushroom img {
+    width: 35px;
+    margin: 0 2.5rem;
+    cursor: pointer;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.mushroom img:hover {
+    transform: scale(1.3);
+    filter: drop-shadow(0 0 5px rgba(255,255,200,0.6))
+        drop-shadow(0 0 15px rgba(255,255,200,0.4));
+    animation: bounce 1s infinite;
+}
+
+/* Tooltip only on hover */
+.mushroom:hover::after {
+    content: 'fun stuff!';
+    position: absolute;
+    top: 100%; 
+    left: 60%;
+    transform: translateX(-50%);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    z-index: 200;
+}
+
+/* Bounce animation */
+@keyframes bounce {
+    0%, 100% { transform: scale(1.3) translateY(0); }
+    50% { transform: scale(1.3) translateY(-8px); }
+}
+
 
 .toast {
     position: fixed;
