@@ -1,6 +1,10 @@
+import { useContext, useState } from 'react'
+import { SoundContext } from '../../context/SoundContext'
 import '../../styles/faq.css'
 
 const FAQ = () => {
+    const { play } = useContext(SoundContext)
+    const [openIndex, setOpenIndex] = useState(null)
 
     const faqs = [
         {
@@ -55,26 +59,40 @@ const FAQ = () => {
         }
     ]
 
+    const toggle = (index) => {
+        const isOpen = openIndex === index
+
+        play('drawer')
+        setOpenIndex(isOpen ? null : index)
+    }
+
     return (
         <div className="faq-page">
             <div className="faq-list">
 
-                {faqs.map((faq, index) => (
-                    <details key={index} className="faq-item">
+                {faqs.map((faq, index) => {
+                    const isOpen = openIndex === index
 
-                        <summary>
-                            {faq.question}
-                        </summary>
+                    return (
+                        <div
+                            key={index}
+                            className={`faq-item ${isOpen ? 'open' : ''}`}
+                        >
+                            <div
+                                className="faq-question"
+                                onClick={() => toggle(index)}
+                            >
+                                {faq.question}
+                            </div>
 
-                        <p>
-                            {faq.answer}
-                        </p>
-
-                    </details>
-                ))}
+                            <div className="faq-answer">
+                                <p>{faq.answer}</p>
+                            </div>
+                        </div>
+                    )
+                })}
 
             </div>
-
         </div>
     )
 }
