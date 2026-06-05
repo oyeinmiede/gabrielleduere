@@ -12,6 +12,7 @@ import Work from '../modals/Work'
 import FAQ from '../modals/FAQ'
 import Links from '../modals/Links'
 import Contact from '../modals/Contact'
+import FunStuff from '../modals/FunStuff'
 
 const WindowRenderer = () => {
     const {
@@ -49,6 +50,7 @@ const WindowRenderer = () => {
             case 'faq': return <FAQ />
             case 'links': return <Links />
             case 'contact': return <Contact />
+            case 'fun stuff' : return <FunStuff />
             default: return null
         }
     }
