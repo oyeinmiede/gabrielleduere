@@ -81,7 +81,7 @@ const FunStuff = () => {
                 <div className="stack-cards">
 
                     <div className="detail-card">
-                        <img src="/images/wave.jpg" alt="WAVE" />
+                        <img src="/images/wave.png" alt="WAVE" />
                         <div className="detail-content">
                             <h4>WAVE</h4>
                             <p>
@@ -91,12 +91,12 @@ const FunStuff = () => {
                                 <span>Role: Technical Lead</span>
                                 <span>Focus: Women in Tech</span>
                             </div>
-                            <a href="#">learn more</a>
+                            <a href="https://www.instagram.com/wave.techh?igsh=MTRxM2RpNGtwOHFpaw==">learn more</a>
                         </div>
                     </div>
 
                     <div className="detail-card">
-                        <img src="/images/tedx.jpg" alt="TEDx" />
+                        <img src="/images/tedx.png" alt="TEDx" />
                         <div className="detail-content">
                             <h4>TEDx Volunteer</h4>
                             <p>
@@ -105,14 +105,14 @@ const FunStuff = () => {
                             </p>
                             <div className="meta">
                                 <span>Role: Volunteer</span>
-                                <span>Focus: Events / Communication</span>
+                                <span>Focus: Events / Welfare</span>
                             </div>
-                            <a href="#">event page</a>
+                            <a href="https://www.instagram.com/tedx.landmarkuniversity?igsh=MWs3NmtoaXZvcXU5cw==">event page</a>
                         </div>
                     </div>
 
                     <div className="detail-card">
-                        <img src="/images/cowrywise.jpg" alt="Cowrywise" />
+                        <img src="/images/cowrywise.png" alt="Cowrywise" />
                         <div className="detail-content">
                             <h4>Cowrywise Ambassador</h4>
                             <p>
@@ -123,14 +123,14 @@ const FunStuff = () => {
                                 <span>Role: Campus Ambassador</span>
                                 <span>Focus: Finance education</span>
                             </div>
-                            <a href="https://cowrywise.com" target="_blank">
+                            <a href="https://www.instagram.com/cowrywise?igsh=MWdsNmh1bnZ2YmQxdQ==" target="_blank">
                                 cowrywise
                             </a>
                         </div>
                     </div>
 
                     <div className="detail-card">
-                        <img src="/images/gdg.jpg" alt="GDG" />
+                        <img src="/images/gdg.png" alt="GDG" />
                         <div className="detail-content">
                             <h4>Google Developer Group</h4>
                             <p>
@@ -141,14 +141,14 @@ const FunStuff = () => {
                                 <span>Role: Member</span>
                                 <span>Focus: Software development</span>
                             </div>
-                            <a href="https://gdg.community.dev" target="_blank">
+                            <a href="https://www.instagram.com/gdgoc.lmu?igsh=ajhvZG91a3Vwd3Vy" target="_blank">
                                 gdg community
                             </a>
                         </div>
                     </div>
 
                     <div className="detail-card">
-                        <img src="/images/htsi.jpg" alt="HTSI" />
+                        <img src="/images/htsi.png" alt="HTSI" />
                         <div className="detail-content">
                             <h4>HTSI</h4>
                             <p>

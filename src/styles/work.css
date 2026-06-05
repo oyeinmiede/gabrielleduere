@@ -1,0 +1,219 @@
+.work {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    overflow-y: scroll;
+    max-width: 100%;
+}
+
+/* =========================
+HEADER
+========================= */
+.work-info {
+    background-color: var(--accent);
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.work-info p {
+    font-size: 1rem;
+    color: var(--text-primary);
+}
+
+.work-info .sub {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+/* =========================
+PANELS (TOOLS / DEV)
+========================= */
+
+.t-and-d {
+    display: flex;
+    gap: 1rem;
+}
+
+.panel {
+    flex: 1;
+    background: var(--soft-bg);
+    border-radius: 10px;
+    padding: .5rem;
+}
+
+.panel h3 {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+/* chips */
+.chip-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.chip {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
+    border-radius: 5px;
+    background: rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
+    box-shadow: var(--text-secondary) 0px 2.95px 1.5px;
+}
+
+/* =========================
+SECTIONS
+========================= */
+
+.section h3 {
+    margin-bottom: 0.5rem;
+    color: var(--accent);
+}
+
+/* =========================
+GRID SYSTEM
+========================= */
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+/* cards */
+.card {
+    background: var(--soft-bg);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.card h4 {
+    color: var(--text-primary);
+}
+
+.card p {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+
+/* screenshot placeholder */
+.screenshot {
+    height: 80px;
+    background: rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+.dev-picks .screenshot {
+    width: 100%;
+}
+
+
+.card.video .screenshot, .section.sites .screenshot {
+    height: 150px;
+}
+
+.screenshot img {
+    max-height: 100%;
+}
+
+
+.dev-picks .card.big {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 19.2px;
+}
+
+/* buttons */
+.btns {
+    display: flex;
+    gap: 0.5rem;
+}
+
+button {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid var(--border);
+    background: transparent;
+    cursor: pointer;
+    font-size: 0.75rem;
+}
+
+/* =========================
+LIST
+========================= */
+
+.list {
+    padding-left: 1.2rem;
+    color: var(--text-secondary);
+}
+
+/* =========================
+NOTE
+========================= */
+
+.note {
+    margin-top: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.git {
+    color: var(--accent);
+}
+
+.btn-row {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.icon-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.4rem;
+    width: 32px;
+    height: 32px;
+}
+
+.btn-row button {
+    color: var(--text-primary);
+    background-color: var(--accent);
+    cursor: pointer;
+    font-size: .85rem;
+    border-radius: 5px;
+}
+
+.long {
+    font-size: 0.8rem;
+    line-height: 1.4;
+    color: var(--text-secondary);
+}
+
+.video .screenshot {
+    height: 100px;
+}
+
+.work ul {
+    list-style: disc;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media (max-width: 768px) {
+    .t-and-d {
+        flex-direction: column;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

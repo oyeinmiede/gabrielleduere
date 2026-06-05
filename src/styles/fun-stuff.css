@@ -124,7 +124,7 @@ GRID CARDS (OLD WEBSITES)
 .card-content a {
     font-size: 0.85rem;
     color: var(--accent);
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 500;
 }
 
@@ -157,8 +157,8 @@ STACK CARDS (EXTRACURRICULARS)
 }
 
 .detail-card img {
-    width: 140px;
-    height: 140px;
+    width: 180px;
+    height: auto;
     object-fit: cover;
     flex-shrink: 0;
 }
@@ -199,7 +199,7 @@ STACK CARDS (EXTRACURRICULARS)
 .detail-content a {
     font-size: 0.85rem;
     color: var(--accent);
-    text-decoration: none;
+    text-decoration: underline;
     font-weight: 500;
 }
 
