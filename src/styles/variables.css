@@ -4,61 +4,70 @@
     --transition-normal: 0.3s ease;
 
     /* Window */
-    --window-radius: 12px;
-    --window-border-width: 1px;
+    --window-radius: 14px;
 
     /* Layout */
     --desktop-padding: 24px;
 
-    /* Shadows */
+    /* Shadows (soft modern elevation) */
     --shadow-window:
-        0 8px 24px rgba(0, 0, 0, 0.15);
+        0 10px 30px rgba(0, 0, 0, 0.12);
 
     /* Fonts */
-    --font-main: 'Trebuchet MS', sans-serif;
-    --font-mono: 'Courier New', monospace;
+    --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
 [data-theme='light'] {
-    --bg-primary: #f6eee7;
-    --bg-secondary: #fffaf5;
+    --bg-primary: #f5f7fb;
+    --bg-secondary: #ffffff;
 
-    --window-bg: rgba(255, 250, 245, 0.9);
+    --window-bg: rgba(255, 255, 255, 0.85);
 
-    --accent: #9c6644;
-    --accent-light: #b08968;
+    --accent: orange;        
+    --accent-light: #6366f1;
 
-    --text-primary: #2d1e16;
-    --text-secondary: #5c4033;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
 
-    --border: #7f5539;
+    --border: #e2e8f0;
 
-    --wave-1: #d4a373;
-    --wave-2: #e6ccb2;
-    --wave-3: #faedcd;
+    /* subtle decorative waves */
+    --wave-1: #c7d2fe;
+    --wave-2: #a5b4fc;
+    --wave-3: #818cf8;
 
-    --header-bg: #9c6644;
-    --header-text: #fffaf5;
+    --header-bg: #0f172a;
+    --header-text: #ffffff;
+
+    /* UI states */
+    --soft-bg: rgba(79, 70, 229, 0.06);
+    --hover-bg: rgba(79, 70, 229, 0.10);
 }
 
 [data-theme='dark'] {
-    --bg-primary: #1a120b;
-    --bg-secondary: #24180f;
+    --bg-primary: #0b1220;
+    --bg-secondary: #111827;
 
-    --window-bg: rgba(45, 30, 22, 0.9);
+    --window-bg: rgba(17, 24, 39, 0.85);
 
-    --accent: #ddb892;
-    --accent-light: #e6ccb2;
+    --accent: #60a5fa;
+    --accent-light: #93c5fd;
 
-    --text-primary: #fff8f0;
-    --text-secondary: #e6ccb2;
+    --text-primary: #f8fafc;
+    --text-secondary: #cbd5e1;
 
-    --border: #b08968;
+    --border: #1f2937;
 
-    --wave-1: #7f5539;
-    --wave-2: #9c6644;
-    --wave-3: #b08968;
+    /* subtle animated waves */
+    --wave-1: #1e293b;
+    --wave-2: #334155;
+    --wave-3: #475569;
 
-    --header-bg: #7f5539;
-    --header-text: #fff8f0;
+    --header-bg: #f8fafc;
+    --header-text: #0f172a;
+
+    /* UI states */
+    --soft-bg: rgba(96, 165, 250, 0.08);
+    --hover-bg: rgba(96, 165, 250, 0.14);
 }
