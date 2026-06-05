@@ -6,12 +6,12 @@
     --transition-normal: 0.3s ease;
 
     /* Window */
-    --window-radius: 14px;
+    --window-radius: 6px;
 
     /* Layout */
     --desktop-padding: 24px;
 
-    /* Shadows (soft modern elevation) */
+    /* Shadows */
     --shadow-window:
         0 10px 30px rgba(0, 0, 0, 0.12);
 
@@ -34,7 +34,6 @@
 
     --border: #e2e8f0;
 
-    /* subtle decorative waves */
     --wave-1: #c7d2fe;
     --wave-2: #a5b4fc;
     --wave-3: #818cf8;
@@ -61,13 +60,12 @@
 
     --border: #1f2937;
 
-    /* subtle animated waves */
     --wave-1: #1e293b;
     --wave-2: #334155;
     --wave-3: #475569;
 
-    --header-bg: #f8fafc;
-    --header-text: #0f172a;
+    --header-bg: #0b1220;
+    --header-text: #f8fafc;
 
     /* UI states */
     --soft-bg: rgba(96, 165, 250, 0.08);

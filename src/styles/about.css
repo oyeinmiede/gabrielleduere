@@ -44,7 +44,7 @@ HEADER SECTION
 .head-content h2 {
     font-size: 1.7rem;
     margin-bottom: 0.2rem;
-    color: var(--border);
+    color: var(--accent);
 }
 
 .head-content p {
@@ -53,7 +53,7 @@ HEADER SECTION
 }
 
 .head-content span {
-    color: var(--border);
+    color: var(--accent);
     text-decoration: underline;
     font-weight: 500;
 }
@@ -149,7 +149,7 @@ EMAIL LINK STYLE
 ========================= */
 
 .about-content span {
-    color: var(--border);
+    color: var(--accent);
     cursor: pointer;
     transition: opacity 0.2s ease;
 }
