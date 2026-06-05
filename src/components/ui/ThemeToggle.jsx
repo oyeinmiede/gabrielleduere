@@ -6,8 +6,8 @@ const ThemeToggle = () => {
     return (
         <button className="theme-btn" onClick={toggleTheme}>
             {theme === 'light'
-                ? <img src="/public/icons/moon.png" alt="" />
-                : <img src="/public/icons/sun.png" alt="" />
+                ? <img src="/icons/moon.png" alt="" />
+                : <img src="/icons/sun.png" alt="" />
             }
         </button>
     )
