@@ -21,7 +21,7 @@
 }
 
 .header {
-    padding: 1rem;
+    padding: .3rem .7rem;
     background: var(--header-bg);
     color: var(--header-text);
     border-bottom: 1px solid var(--border);
@@ -29,7 +29,7 @@
 
 .header h3 {
     font-family: var(--font-mono);
-    font-weight: 400;
+    font-weight: 300;
 }
 
 .modal-content {

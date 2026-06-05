@@ -1,7 +1,9 @@
 .window {
     position: absolute;
-    width: 600px;
-    height: 450px;
+    max-width: 600px;
+    min-width: 400px;
+    max-height: 600px;
+    min-height: 450px;
     background: var(--window-bg);
     border: 1px solid var(--border);
     border-radius: var(--window-radius);
@@ -22,10 +24,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding: .3rem .7rem;
     background: var(--header-bg);
     color: var(--header-text);
-    cursor: move;
+    font-size: .8rem;
+}
+
+.window-header h3 {
+    font-family: var(--font-mono);
+    font-weight: 100;
 }
 
 .window-header button {
@@ -33,4 +40,5 @@
     background: transparent;
     color: inherit;
     cursor: pointer;
+    font-family: var(--font-main);
 }
