@@ -1,13 +1,42 @@
-import Mushroom from '../ui/Mushroom'
 import { useContext } from 'react'
+
+import Mushroom from '../ui/Mushroom'
+
 import { WindowContext } from '../../context/WindowContext'
-import { SoundContext } from '../../context/SoundContext'
+import { ThemeContext } from '../../context/ThemeContext'
 
 import '../../styles/home.css'
 
 const Home = () => {
-    const { play } = useContext(SoundContext)
+
     const { openWindow } = useContext(WindowContext)
+    const { theme } = useContext(ThemeContext)
+
+    const links = [
+        {
+            id: 'about',
+            label: 'about'
+        },
+        {
+            id: 'links',
+            label: 'links'
+        },
+        {
+            id: 'work',
+            label: 'work'
+        },
+        {
+            id: 'faq',
+            label: 'faq'
+        },
+        {
+            id: 'contact',
+            label: 'contact'
+        }
+    ]
+
+    const icon = (name) =>
+        `/icons/icon_${name}_${theme}.webp`
 
     return (
         <div className="home-modal">
@@ -34,64 +63,25 @@ const Home = () => {
 
                     <div className="modal-links">
 
-                        <div
-                            className="modal-link"
-                            onClick={(e) => {
-                                e.stopPropagation()
-                                play('open')
-                                openWindow('about')}
-                            }
-                        >
-                            <img
-                                src="/icons/icon_about_dark.webp"
-                                alt="about"
-                            />
-                            <span>about</span>
-                        </div>
+                        {links.map((link) => (
+                            <div
+                                key={link.id}
+                                className="modal-link"
+                                onClick={(e) => {
+                                    e.stopPropagation()
+                                    openWindow(link.id)
+                                }}
+                            >
+                                <img
+                                    src={icon(link.id)}
+                                    alt={link.label}
+                                />
 
-                        <div
-                            className="modal-link"
-                            onClick={() => openWindow('links')}
-                        >
-                            <img
-                                src="/icons/icon_links_dark.webp"
-                                alt="links"
-                            />
-                            <span>links</span>
-                        </div>
-
-                        <div
-                            className="modal-link"
-                            onClick={() => openWindow('work')}
-                        >
-                            <img
-                                src="/icons/icon_work_dark.webp"
-                                alt="work"
-                            />
-                            <span>work</span>
-                        </div>
-
-                        <div
-                            className="modal-link"
-                            onClick={() => openWindow('faq')}
-                        >
-                            <img
-                                src="/icons/icon_faq_dark.webp"
-                                alt="faq"
-                            />
-                            <span>faq</span>
-                        </div>
-
-                        <div
-                            className="modal-link"
-                            onClick={() => openWindow('contact')}
-                        >
-                            <img
-                                src="/icons/icon_contact_dark.webp"
-                                alt="contact"
-                            />
-                            <span>contact</span>
-                        </div>
+                                <span>
+                                    {link.label}
+                                </span>
+                            </div>
+                        ))}
 
                     </div>
 

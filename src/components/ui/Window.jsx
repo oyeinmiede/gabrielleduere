@@ -38,7 +38,7 @@ const Window = ({
         setDragging(false)
     }
 
-    useEffect((e) => {
+    useEffect(() => {
         play('open')
     }, [])
 
