@@ -46,10 +46,12 @@
     font-size: 3rem;
     margin-bottom: 1rem;
     color: var(--accent);
+    font-weight: 600;
 }
 
 .modal-content h1 span {
     color: var(--text-primary);
+    font-weight: 100;
 }
 
 .modal-content p {

@@ -12,6 +12,7 @@ const Window = ({
 }) => {
     const [dragging, setDragging] = useState(false)
     const { play } = useContext(SoundContext)
+
     const offset = useRef({ x: 0, y: 0 })
 
     const onMouseDown = (e) => {
@@ -23,11 +24,12 @@ const Window = ({
             x: e.clientX - window.x,
             y: e.clientY - window.y
         }
+
+        document.addEventListener('mousemove', onMouseMove)
+        document.addEventListener('mouseup', onMouseUp)
     }
 
     const onMouseMove = (e) => {
-        if (!dragging) return
-
         const x = e.clientX - offset.current.x
         const y = e.clientY - offset.current.y
 
@@ -36,6 +38,9 @@ const Window = ({
 
     const onMouseUp = () => {
         setDragging(false)
+
+        document.removeEventListener('mousemove', onMouseMove)
+        document.removeEventListener('mouseup', onMouseUp)
     }
 
     useEffect(() => {
@@ -43,11 +48,7 @@ const Window = ({
     }, [])
 
     return (
-        <div
-            className="window"
-            onMouseMove={onMouseMove}
-            onMouseUp={onMouseUp}
-        >
+        <div className="window">
             <div
                 className="window-header"
                 onMouseDown={onMouseDown}
