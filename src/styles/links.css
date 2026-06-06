@@ -98,7 +98,7 @@ RESPONSIVE
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .links-page {
         width: 100%;
     }
