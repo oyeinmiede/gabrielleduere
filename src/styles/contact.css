@@ -13,6 +13,7 @@ div.mail {
     color: var(--accent);
     margin-bottom: 0.75rem;
     font-size: 1.3rem;
+    font-family: var(--font-mono);
 }
 
 .mail p {
@@ -36,18 +37,18 @@ div.mail {
     object-fit: cover;
 }
 
-.mail span.mail {
+.mail .mail-link {
     color: var(--accent);
     font-weight: 600;
     cursor: pointer;
 }
 
-.mail span {
+.mail .mail-link {
     user-select: text;
     -webkit-user-select: text;
 }
 
-.mail span.mail:hover {
+.mail .mail-link:hover {
     text-decoration: underline;
 }
 

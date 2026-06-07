@@ -17,6 +17,7 @@ const Window = ({
 
     const onPointerDown = (e) => {
         e.currentTarget.setPointerCapture(e.pointerId)
+        if (e.target.closest('button')) return
         setDragging(true)
 
         bringToFront(window.type)
@@ -57,6 +58,9 @@ const Window = ({
                 <h3>{title}</h3>
 
                 <button
+                    onPointerDown={(e) => {
+                        e.stopPropagation()
+                    }}
                     onClick={(e) => {
                         e.stopPropagation()
                         play('close')

@@ -12,7 +12,7 @@ const Contact = () => {
             <p>
                 the easiest way to contact me is through email!
                 i don't really check my social media messages,
-                so please direct questions to my email instead 👍
+                so please direct questions to my email instead 👍🏽
             </p>
 
             <div className="mail-img">
@@ -30,7 +30,7 @@ const Contact = () => {
             </p>
 
             <p>
-                or press the button below to open your mail app
+                or press the button below to open your mail app.
             </p>
 
             <a
