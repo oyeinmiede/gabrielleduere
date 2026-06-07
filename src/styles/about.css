@@ -80,15 +80,6 @@ CONTENT SECTION
     scroll-behavior: smooth;
 }
 
-.about-content::-webkit-scrollbar {
-    width: 6px;
-}
-
-.about-content::-webkit-scrollbar-thumb {
-    background: var(--border);
-    border-radius: 10px;
-}
-
 .about-content p {
     margin-bottom: 0.8rem;
     color: var(--text-secondary);
