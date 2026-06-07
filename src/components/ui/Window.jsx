@@ -15,7 +15,8 @@ const Window = ({
 
     const offset = useRef({ x: 0, y: 0 })
 
-    const onMouseDown = (e) => {
+    const onPointerDown = (e) => {
+        e.currentTarget.setPointerCapture(e.pointerId)
         setDragging(true)
 
         bringToFront(window.type)
@@ -25,22 +26,22 @@ const Window = ({
             y: e.clientY - window.y
         }
 
-        document.addEventListener('mousemove', onMouseMove)
-        document.addEventListener('mouseup', onMouseUp)
+        document.addEventListener('pointermove', onPointerMove)
+        document.addEventListener('pointerup', onPointerUp)
     }
 
-    const onMouseMove = (e) => {
+    const onPointerMove = (e) => {
         const x = e.clientX - offset.current.x
         const y = e.clientY - offset.current.y
 
         updatePosition(window.type, x, y)
     }
 
-    const onMouseUp = () => {
+    const onPointerUp = () => {
         setDragging(false)
 
-        document.removeEventListener('mousemove', onMouseMove)
-        document.removeEventListener('mouseup', onMouseUp)
+        document.removeEventListener('pointermove', onPointerMove)
+        document.removeEventListener('pointerup', onPointerUp)
     }
 
     useEffect(() => {
@@ -51,7 +52,7 @@ const Window = ({
         <div className="window">
             <div
                 className="window-header"
-                onMouseDown={onMouseDown}
+                onPointerDown={onPointerDown}
             >
                 <h3>{title}</h3>
 
