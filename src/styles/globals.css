@@ -4,6 +4,7 @@ body {
     color: var(--text-primary);
 
     overflow: hidden;
+    max-width: 100vw;
 
     transition:
         background var(--transition-normal),
