@@ -67,7 +67,7 @@ body {
 
 .mushroom:hover::after {
     content: 'fun stuff!';
-    color: var(--header-text);
+    color: var(--accent);
     position: absolute;
     top: 100%; 
     left: 50%;
