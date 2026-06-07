@@ -175,7 +175,7 @@ STACK CARDS (EXTRACURRICULARS)
 
 .detail-content p {
     font-size: 0.85rem;
-    color: var(--text-secondary);
+    color: var(--accent);
     line-height: 1.4;
     margin-bottom: 0.6rem;
 }
