@@ -22,18 +22,18 @@ const Work = () => {
             git: "https://github.com/Gabrielle3101/piqr"
         },
         {
-            name: "REST Countries API",
-            desc: "A country explorer app using REST API with filtering, search, and theme switching.",
-            image: "/images/rest-countries.png",
-            link: "https://fm-archive.vercel.app/fm-projects/rest-countries-api-with-color-theme-switcher-master/",
-            git: "https://github.com/oyeinmiede/fm-archive/tree/main/public/fm-projects/rest-countries-api-with-color-theme-switcher-master"
+            name: "Foreign Exchange Rate Checker",
+            desc: "A web app that lets users explore countries and check live foreign exchange rates.",
+            image: "/images/fx-checker.png",
+            link: "https://fx-checker-tau.vercel.app",
+            git: "https://github.com/oyeinmiede/fx-checker"
         },
         {
-            name: "Mange Landing Page",
-            desc: "A product landing page showcasing features with structured sections and CTAs.",
-            image: "/images/manage-page.png",
-            link: "https://fm-archive.vercel.app/fm-projects/manage-landing-page-master/",
-            git: "https://github.com/oyeinmiede/fm-archive/tree/main/public/fm-projects/manage-landing-page-master"
+            name: "Apis",
+            desc: "A collaborative canvas for teams, students, and creatives. Sketch ideas, map workflows, and build better — together.",
+            image: "/images/apis.png",
+            link: "https://apis-m7xy.vercel.app/",
+            git: "https://github.com/oyeinmiede/apis"
         },
     ]
 
